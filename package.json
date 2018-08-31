@@ -1,0 +1,20 @@
+{
+  "name": "node-js-blog",
+  "version": "1.0.0",
+  "description": "简易版个人博客\r # 启动项目\r ```\r   node app\r   ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hpfgit/node-js-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hpfgit/node-js-blog/issues"
+  },
+  "homepage": "https://github.com/hpfgit/node-js-blog#readme"
+}
