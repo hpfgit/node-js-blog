@@ -17,7 +17,7 @@ const CONFIG = {
   httpOnly: true,
   signed: true,
   rolling: true
-}
+};
 // 注册session
 app.use(session(CONFIG, app));
 // 注册日志模块
