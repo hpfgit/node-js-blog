@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26e926d2-e20f-41b6-8129-1c87f573a6f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/WiredTiger" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/WiredTiger" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/WiredTiger.lock" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/WiredTiger.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/WiredTiger.turtle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/WiredTiger.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/_mdb_catalog.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/_mdb_catalog.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-0-81820546547741830.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-2-81820546547741830.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-4-81820546547741830.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2018-09-01T13-17-09Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2018-09-02T01-37-45Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-1-81820546547741830.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-3-81820546547741830.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-5-81820546547741830.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-6-81820546547741830.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/journal/WiredTigerLog.0000000002" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/journal/WiredTigerLog.0000000002" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/mongod.lock" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/mongod.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/sizeStorer.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/promise/async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/promise/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/promise/generator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/promise/iterator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,34 +23,37 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.84" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="385" />
+          <entry key="js" value="1170" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="385" />
+          <entry key="JavaScript" value="1170" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="2" />
+          <entry key="css" value="1" />
+          <entry key="js" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="2" />
+          <entry key="CSS" value="1" />
+          <entry key="JavaScript" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/control/article.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -76,16 +63,60 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/schema/article.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/promise/demo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/promise/iterator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/promise/generator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/promise/async.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -96,6 +127,11 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/control/article.js" />
         <option value="$PROJECT_DIR$/schema/article.js" />
+        <option value="$PROJECT_DIR$/promise/demo.js" />
+        <option value="$PROJECT_DIR$/promise/iterator.js" />
+        <option value="$PROJECT_DIR$/promise/generator.css" />
+        <option value="$PROJECT_DIR$/promise/generator.js" />
+        <option value="$PROJECT_DIR$/promise/async.js" />
       </list>
     </option>
   </component>
@@ -121,6 +157,9 @@
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -133,6 +172,11 @@
               <item name="node-js-blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="node-js-blog" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="node-js-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="node-js-blog" type="462c0819:PsiDirectoryNode" />
+              <item name="promise" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -143,7 +187,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.SCSS" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -168,23 +213,20 @@
       <option name="presentableId" value="Default" />
       <updated>1535954879612</updated>
       <workItem from="1535954884147" duration="3705000" />
+      <workItem from="1535959496224" duration="5887000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3705000" />
+    <option name="totallyTimeSpent" value="9592000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="281" y="14" width="1400" height="1000" extended-state="0" />
     <layout>
-      <window_info id="npm" side_tool="true" />
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496329" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.35028902" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.32947975" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -192,6 +234,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32947975" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32947975" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.35028902" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -202,6 +248,9 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app.js">
@@ -221,7 +270,35 @@
     <entry file="file://$PROJECT_DIR$/schema/article.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/promise/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/promise/iterator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/promise/generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/promise/async.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>
