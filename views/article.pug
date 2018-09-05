@@ -32,7 +32,7 @@ block contents
           div.other-info.text-center
             span= article.author.username
             span &nbsp;&nbsp;发表于：
-            span= article.updated.toLocaleString()
+            span= article.createdAt.toLocaleString()
             span &nbsp;分类：
             span= article.tips
           //- 文章内容
@@ -60,7 +60,7 @@ block contents
                 img(src=info.from.avatar)
                 div
                   p.author= info.from.username
-                  p.time= info.created.toLocaleString()
+                  p.time= info.createdAt.toLocaleString()
                 .she-said!= info.content
 
       //- 右侧公告

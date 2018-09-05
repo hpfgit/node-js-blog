@@ -21,11 +21,11 @@ exports.reg = async ctx => {
       // 用户名不存在
       const _user = new User({
         username,
-        password: crypto(password)
+        password: crypto(password),
+        articleNum: 0,
+        commentNum: 0
       });
       _user.save((err,data)=>{
-        console.log(data);
-        
         if (err) {
           reject(err);
         } else {
@@ -35,7 +35,6 @@ exports.reg = async ctx => {
     });
   })
   .then(async data=>{
-    console.log(data)
     if (data) {
       // 注册成功
       await ctx.render('isOk', {
@@ -53,7 +52,7 @@ exports.reg = async ctx => {
       status: '注册失败，请重试'
     })
   })
-}
+};
 
 exports.login = async ctx => {
   const user = ctx.request.body;
@@ -74,7 +73,6 @@ exports.login = async ctx => {
         status: '密码不正确，登陆失败'
       });
     }
-
     ctx.cookies.set("username", username, {
       domain: 'localhost',
       path: '/',
@@ -82,13 +80,19 @@ exports.login = async ctx => {
       httpOlay: false,
       overwrite: false
     });
-    ctx.cookies.set("_uid", data[0]._id, {
+    ctx.cookies.set("uid", data[0]._id, {
       domain: 'localhost',
       path: '/',
       maxAge: 36e5,
       httpOlay: false,
       overwrite: false
     });
+    ctx.session = {
+      username,
+      uid: data[0]._id,
+      avatar: data[0].avatar
+    };
+
 
     await ctx.render('isOk', {
       status: '登陆成功'
@@ -99,19 +103,20 @@ exports.login = async ctx => {
       status: '登陆失败'
     });
   })
-}
+};
 
 exports.keepLog = async (ctx, next)=>{
   if (ctx.session.isNew) {
     if (ctx.cookies.get("username")) {
       ctx.session = {
         username: ctx.cookies.get('username'),
-        uid: ctx.cookies.get("_uid")
+        uid: ctx.cookies.get("uid"),
+        avatar: ctx.cookies.get("avatar")
       }
     }
   }
   await next();
-}
+};
 
 exports.logout = async (ctx) => {
   ctx.session = null;
@@ -123,4 +128,4 @@ exports.logout = async (ctx) => {
   });
   // 重定向
   ctx.redirect("/");
-}
+};

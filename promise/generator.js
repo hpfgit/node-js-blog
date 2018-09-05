@@ -1,10 +1,10 @@
 function* f() {
   yield console.log(1);
-  yield console.log(2);
-  yield console.log(3);
+  yield console.log(1);
+  yield console.log(1);
+  return console.log(1);
 }
-const fn = f();
-fn.next();
-fn.next();
-fn.next();
-fn.next();
+const iter = f();
+for (let number of iter) {
+
+}

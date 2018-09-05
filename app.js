@@ -21,7 +21,7 @@ const CONFIG = {
 // 注册session
 app.use(session(CONFIG, app));
 // 注册日志模块
-app.use(logger());
+// app.use(logger());
 // 处理post请求数据
 app.use(body());
 // 配置静态资源目录
@@ -38,3 +38,35 @@ app
 app.listen(3000, ()=>{
   console.log('项目启动成功');
 });
+
+{
+  const {db} = require('./schema/config');
+  const userScheam = require('./schema/user');
+  const User = db.model('users', userScheam);
+  const crypto = require('./util/encrypt');
+
+  User
+    .find({'username': 'admin'})
+    .then(data=>{
+      if (data.length === 0) {
+        // 管理员不存在
+        new User({
+            username: 'admin',
+            password: crypto('admin'),
+            role: 666,
+            articleNum: 0,
+            commentNum: 0
+          })
+          .save()
+          .then(data=>{
+            console.log('管理员创建成功，用户名：admin，密码：admin');
+          })
+          .catch(err=>{
+            console.log('管理员创建失败');
+          })
+      } else {
+        // 管理员存在
+        console.log('管理员创建成功，用户名：admin，密码：admin');
+      }
+    })
+}
