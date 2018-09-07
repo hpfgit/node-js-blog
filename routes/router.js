@@ -29,7 +29,7 @@ router.get('/article/:id', user.keepLog, article.details);
 // 添加评论
 router.post('/comment', user.keepLog, comment.save);
 // 个人中心
-router.get('/admin/index', user.keepLog, admin.index);
+router.get('/admin/:id', user.keepLog, admin.index);
 router.get('*', async (ctx)=>{
   await ctx.render('404', {
     title: '尼玛的'
