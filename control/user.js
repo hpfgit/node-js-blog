@@ -109,10 +109,12 @@ exports.login = async ctx => {
 exports.keepLog = async (ctx, next)=>{
   if (ctx.session.isNew) {
     if (ctx.cookies.get("username")) {
+      let uid = ctx.cookies.get("uid");
+      const avatar = User.findById(uid).then(data=>data.avatar);
       ctx.session = {
         username: ctx.cookies.get('username'),
-        uid: ctx.cookies.get("uid"),
-        avatar: ctx.cookies.get("avatar")
+        uid,
+        avatar
       }
     }
   }
@@ -129,4 +131,25 @@ exports.logout = async (ctx) => {
   });
   // 重定向
   ctx.redirect("/");
+};
+
+exports.upload = async (ctx) => {
+  const filename = ctx.req.file.filename;
+  console.log(filename);
+  let data = {};
+  await User.update({_id: ctx.session.uid}, {$set: {avatar: '/avatar/'+filename}}, (err,res)=>{
+    console.log(res);
+    if (err) {
+      data = {
+        status: 0,
+        message: err
+      }
+    } else {
+      data = {
+        status: 1,
+        message: '上传成功'
+      }
+    }
+  });
+  ctx.body = data;
 };

@@ -48,3 +48,19 @@ exports.save = async (ctx) => {
     });
   ctx.body = meg;
 };
+
+// 获取用户的评论
+exports.comlist = async (ctx) => {
+  const uid = ctx.session.uid;
+  const data = await Comment.find({from: uid}).populate('article', 'title');
+  ctx.body = {
+    code: 0,
+    count: data.length,
+    data
+  };
+};
+
+// 删除评论
+exports.del = async (ctx) => {
+  const id = ctx.params.id;
+};
