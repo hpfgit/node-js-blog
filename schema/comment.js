@@ -18,4 +18,13 @@ const commentSchema = new Schema({
   }
 });
 
+commentSchema.post('remove',(document)=>{
+  const Article = require('../models/article');
+  const User = require('../models/user');
+  const {from, article} = document;
+  Article.updateOne({_id: article}, {$inc: {commentNum: -1}}).exec();
+  User.updateOne({_id: from}, {$inc: {commentNum: -1}}).exec()
+  console.log('歘发了')
+});
+
 module.exports = commentSchema;

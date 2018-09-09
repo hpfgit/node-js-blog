@@ -16,4 +16,15 @@ const articleSchema = new Schema({
   }
 });
 
+articleSchema.post('remove',(doc)=>{
+  const Comment = require('../models/comment');
+  const User = require('../models/user');
+  const {_id: artId, author: authorId} = doc;
+  User.findByIdAndUpdate(artId, {$inc: {articleNum: -1}}).exec();
+  Comment.find({article: artId})
+    .then(data=>{
+      data.forEach(v => v.remove());
+    })
+});
+
 module.exports = articleSchema;

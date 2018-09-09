@@ -6,6 +6,7 @@ const logger = require('koa-logger');
 const {join} = require('path');
 const body = require('koa-body');
 const session = require('koa-session');
+const compress = require('koa-compress');
 // 生成koa实例
 const app = new Koa;
 app.keys = ['风雨是个大帅比'];
@@ -21,7 +22,12 @@ const CONFIG = {
 // 注册session
 app.use(session(CONFIG, app));
 // 注册日志模块
-// app.use(logger());
+app.use(logger());
+// 注册压缩资源模块
+app.use(compress({
+  threshold: 2048,
+  flush: require('zlib').Z_SYNC_FLUSH
+}));
 // 处理post请求数据
 app.use(body());
 // 配置静态资源目录

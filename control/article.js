@@ -1,10 +1,6 @@
-const {db} = require('../schema/config');
-const articleScheam = require('../schema/article');
-const Article = db.model('articles', articleScheam);
-const userScheam = require('../schema/user');
-const User = db.model('users', userScheam);
-const commentScheam = require('../schema/comment');
-const Comment = db.model('comment', commentScheam);
+const Article = require('../models/article');
+const User = require('../models/user');
+const Comment = require('../models/comment');
 
 exports.addPage = async (ctx) => {
   await ctx.render('add-article', {
@@ -94,4 +90,31 @@ exports.details = async (ctx) =>{
     comment,
     session: ctx.session
   })
+};
+
+exports.artlist = async (ctx) => {
+  const uid = ctx.session.uid;
+  const data = await Article.find({author: uid});
+  ctx.body = {
+    code: 0,
+    count: data.length,
+    data
+  }
+};
+
+exports.del = async ctx => {
+  const _id = ctx.params.id;
+  let res = {
+    state: 1,
+    message: '成功'
+  }
+  await Article.findById(_id)
+    .then(data=>data.remove())
+    .catch(err=>{
+      res = {
+        state: 0,
+        message: err
+      }
+    });
+  ctx.body = res;
 };

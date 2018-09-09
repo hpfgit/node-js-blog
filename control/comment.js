@@ -1,10 +1,6 @@
-const {db} = require('../schema/config');
-const articleScheam = require('../schema/article');
-const Article = db.model('articles', articleScheam);
-const userScheam = require('../schema/user');
-const User = db.model('users', userScheam);
-const commentScheam = require('../schema/comment');
-const Comment = db.model('comment', commentScheam);
+const Article = require('../models/article');
+const User = require('../models/user');
+const Comment = require('../models/comment');
 
 exports.save = async (ctx) => {
   let meg = {
@@ -63,4 +59,17 @@ exports.comlist = async (ctx) => {
 // 删除评论
 exports.del = async (ctx) => {
   const id = ctx.params.id;
+  let res = {
+    state: 1,
+    message: '成功'
+  }
+  await Comment.findById(id)
+    .then(data=>data.remove())
+    .catch(err=>{
+      res = {
+        state: 0,
+        message: err
+      }
+    });
+  ctx.body = res;
 };

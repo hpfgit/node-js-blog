@@ -1,6 +1,4 @@
-const {db} = require('../schema/config');
-const userScheam = require('../schema/user');
-const User = db.model('users', userScheam);
+const User = require('../models/user');
 const crypto = require('../util/encrypt');
 
 // 用户注册

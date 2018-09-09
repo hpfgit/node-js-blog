@@ -36,7 +36,11 @@ router.post('/upload', user.keepLog, upload.single('file'), user.upload);
 // 获取用户的所有的评论
 router.get('/user/comments', user.keepLog, comment.comlist);
 // 删除评论
-router.del('/delete/:id', user.keepLog, comment.del);
+router.del('/comment/:id', user.keepLog, comment.del);
+// 获取所有的文章列表
+router.get('/user/articles', user.keepLog, article.artlist);
+// 删除文章
+router.del('/article/:id', user.keepLog, article.del);
 router.get('*', async (ctx)=>{
   await ctx.render('404', {
     title: '尼玛的'
