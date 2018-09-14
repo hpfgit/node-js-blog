@@ -151,3 +151,8 @@ exports.upload = async (ctx) => {
   });
   ctx.body = data;
 };
+
+exports.userlist = async (ctx) => {
+  const data = await User.find({}).then(data => data);
+  console.log(data);
+};

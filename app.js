@@ -22,7 +22,7 @@ const CONFIG = {
 // 注册session
 app.use(session(CONFIG, app));
 // 注册日志模块
-app.use(logger());
+// app.use(logger());
 // 注册压缩资源模块
 app.use(compress({
   threshold: 2048,

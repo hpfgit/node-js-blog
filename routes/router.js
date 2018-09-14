@@ -41,6 +41,8 @@ router.del('/comment/:id', user.keepLog, comment.del);
 router.get('/user/articles', user.keepLog, article.artlist);
 // 删除文章
 router.del('/article/:id', user.keepLog, article.del);
+// 获取用户列表
+router.get('/admin/user', user.keepLog, user.userlist);
 router.get('*', async (ctx)=>{
   await ctx.render('404', {
     title: '尼玛的'
